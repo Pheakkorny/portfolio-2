@@ -1,28 +1,65 @@
-import React from 'react'
+import React, { useState } from 'react';
 import './works.css';
-import Portfolio1 from '../../assets/portfolio-1.png';
-import Portfolio2 from '../../assets/portfolio-2.png';
-import Portfolio3 from '../../assets/portfolio-3.png';
-import Portfolio4 from '../../assets/portfolio-4.png';
-import Portfolio5 from '../../assets/portfolio-5.png';
-import Portfolio6 from '../../assets/portfolio-6.png';
+import Course1 from '../../assets/course1.PNG';
+import Course2 from '../../assets/course2.jpg';
+import Course3 from '../../assets/course3.PNG';
+import Course4 from '../../assets/course4.PNG';
+import Course5 from '../../assets/course5.PNG';
+import Course6 from '../../assets/course6.PNG';
+import EducationImg from '../../assets/educationImg.jpg';
+
+const courseCards = [
+  { image: Course1, title: 'OOP C# & SQL', description: 'The Object-Oriented Programming with C#, Microsoft SQL Server.' },
+  { image: Course2, title: 'Full Stack React Node Express MySQL', description: 'Completed course at NIT Cambodia teaching by Professor Dy Vannak.' },
+  { image: Course3, title: 'AWS Academy Data Engineering', description: 'AWS Academy Graduate - AWS Academy Data Engineering.' },
+  { image: Course4, title: 'Machine Learning Foundations', description: 'AWS Academy Graduate - AWS Academy Machine Learning Foundations.' },
+  { image: Course5, title: 'AWS Academy Cloud Architecting', description: 'AWS Academy Graduate - AWS Academy Cloud Architecting.' },
+  { image: Course6, title: 'AWS Academy Cloud Foundations', description: 'AWS Academy Graduate - AWS Academy Cloud Foundations.' },
+];
 
 const Works = () => {
+  const [showAllCourses, setShowAllCourses] = useState(false);
+
+  const visibleCourses = showAllCourses ? courseCards : courseCards.slice(0, 3);
+
   return (
     <section id='works'>
-        <h2 className='worksTitle'>My Portfolio</h2>
-        <span className='worksDesc'>I take pride in paying attention to the smallest destails and making sure that my work is pixel perfect. I am excited to bring my skills and experience to help businesses achive their goals and create a strong online pressence.</span>
-        <div className='worksImgs' >
-            <img src={Portfolio1} alt='Portfolio1' className='worksImg'/>
-            <img src={Portfolio2} alt='Portfolio2' className='worksImg'/>
-            <img src={Portfolio3} alt='Portfolio3' className='worksImg'/>
-            <img src={Portfolio4} alt='Portfolio4' className='worksImg'/>
-            <img src={Portfolio5} alt='Portfolio5' className='worksImg'/>
-            <img src={Portfolio6} alt='Portfolio6' className='worksImg'/>
-        </div>
-        <button className='worksBtn'>See More</button>
-    </section>
-  )
-}
+      <h2 className='worksTitle'>Education & Completed Courses</h2>
+      <span className='worksDesc'>
+        Below is an overview of my academic background and the courses I’ve successfully completed. I hold a Bachelor's degree in Computer Science from the Royal University of Phnom Penh, which laid the foundation for my continued learning and professional development.
+      </span>
 
-export default Works
+      {/* Education Card */}
+      <div className='educationCard'>
+        <div className='educationContent'>
+          <img src={EducationImg} alt='Graduation' className='educationImage' />
+          <div className='educationText'>
+            <h3 className='cardTitle'><strong>Bachelor of Computer Science</strong></h3>
+            <p className='cardYears'><strong>2021 – 2025</strong></p>
+            <p className='cardDesc'>
+              Graduated from the Royal University of Phnom Penh, where I studied software development, algorithms, and system architecture while engaging in team projects and practical research.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Courses */}
+      <div className='worksCards'>
+        {visibleCourses.map((card, index) => (
+          <div className='card' key={index}>
+            <img src={card.image} alt={card.title} className='cardImage' />
+            <h3 className='cardTitles'>{card.title}</h3>
+            <p className='cardDesc'>{card.description}</p>
+          </div>
+        ))}
+      </div>
+
+      {/* Toggle Button */}
+      <button className='worksBtn' onClick={() => setShowAllCourses(!showAllCourses)}>
+        {showAllCourses ? 'Show Less' : 'See More'}
+      </button>
+    </section>
+  );
+};
+
+export default Works;

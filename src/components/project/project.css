@@ -1,0 +1,135 @@
+#project {
+    margin: 0 auto;
+    min-height: calc(100vh - 4rem);
+    width: 100vw;
+    max-width: 60rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.projectTitle {
+    margin: 1rem 0;
+    font-size: 3rem;
+}
+
+.projectDesc {
+    font-weight: 300;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* === NEW CARD LAYOUT === */
+.projectCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 65rem;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.6); /* semi-transparent black */
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white; /* Ensure text is visible on dark background */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.cardImage {
+    width: 100%;
+    height: 9rem;
+    object-fit: cover;
+    border-radius: 0.75rem;
+}
+
+
+.cardDesc {
+    font-size: 0.95rem;
+    color: #ccc;
+    margin-top: 0.5rem;
+}
+.projectBtn {
+    margin: 3rem 0;
+    padding: 0.5rem 2.5rem;
+    border: none;
+    border-radius: 2rem;
+    background: white;
+    font-size: 1rem;
+}
+
+
+.confirmBar {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  z-index: 1000;
+}
+
+.confirmBar button {
+  padding: 6px 14px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.confirmBar button:last-child {
+  background-color: #ccc;
+  color: #333;
+}
+.txtq{
+    color: black;
+}
+
+
+.projectLinks {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+.projectLinks h4 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.projectLinks ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.projectLinks li {
+  margin-bottom: 5px;
+}
+
+.projectLinks a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.projectLinks a:hover {
+  text-decoration: underline;
+}

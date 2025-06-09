@@ -15,29 +15,6 @@
     margin-bottom: 1rem;
 }
 
-.clientDesc {
-    font-weight: 300;
-    font-size: 1rem;
-}
-
-.clientImgs {
-    margin: 1rem 0;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.clientImg {
-    object-fit: cover;
-    width: 23%;
-    min-width: 9rem;
-    margin: auto;
-    padding: 0.25rem;
-}
-
-#client{
-    padding: 2rem;
-}
-
 .contactDesc {
     padding: 1rem;
     font-size: medium;
@@ -85,4 +62,35 @@
     height: 3rem;
     width: 3rem;
     margin: 0 0.75rem;
+}
+#profile {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.profileCard {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.05); /* light transparent box */
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.profileImage {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.profileDetails {
+  text-align: left;
+  max-width: 400px;
+  font-size: 1rem;
+  line-height: 1.8;
 }

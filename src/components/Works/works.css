@@ -1,4 +1,4 @@
-#works {
+/* #works {
     margin: 0 auto;
     min-height: calc(100vh - 4rem);
     width: 100vw;
@@ -45,4 +45,129 @@
     .worksImg {
         height: 58vw;
     }
+} */
+
+#works {
+    margin: 0 auto;
+    min-height: calc(100vh - 4rem);
+    width: 100vw;
+    max-width: 60rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.worksTitle {
+    margin: 1rem 0;
+    font-size: 3rem;
+}
+
+.worksDesc {
+    font-weight: 300;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* === NEW CARD LAYOUT === */
+.worksCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 65rem;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.6); /* semi-transparent black */
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white; /* Ensure text is visible on dark background */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.cardImage {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    border-radius: 0.75rem;
+}
+
+
+.cardDesc {
+    font-size: 0.95rem;
+    color: #ccc;
+    margin-top: 0.5rem;
+}
+.educationCard {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  padding: 1.5rem;
+  color: white;
+  margin-bottom: 2rem;
+  max-width: 65rem;
+  width: 100%;
+}
+
+.educationContent {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.educationImage {
+  width: 250px;
+  height: auto;
+  border-radius: 0.75rem;
+  flex-shrink: 0;
+}
+
+.educationText {
+  flex: 1;
+  min-width: 200px;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.cardYears {
+  font-size: 1rem;
+  color: #aaa;
+  margin-bottom: 0.5rem;
+}
+
+.cardDesc {
+  font-size: 1rem;
+  color: #ccc;
+}
+.cardTitles{
+    font-size: 1.2rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+  color: white;
+}
+.worksBtn {
+    margin: 3rem 0;
+    padding: 0.5rem 2.5rem;
+    border: none;
+    border-radius: 2rem;
+    background: white;
+    font-size: 1rem;
 }
